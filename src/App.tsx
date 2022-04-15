@@ -50,7 +50,7 @@ const App: React.FC = () => {
       />
       <Section
         title="Overlays"
-        colors={{ Overlays }}
+        colors={{ "": Overlays }}
         description="The black and white scales are designed for overlays. These scales don’t change across themes."
       />
     </main>
