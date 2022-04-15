@@ -17,7 +17,7 @@ const App: React.FC = () => {
           <Fragment>
             Radix Colors provides 15 color scales, designed for white foreground
             text at step{" "}
-            <code className="text-violet-11 bg-violet-3 text-[max(12px,_85%)]">
+            <code className="text-violet-11 bg-violet-3 px-[3px] pb-[2px] text-[max(12px,_85%)]">
               9
             </code>
             .
@@ -31,7 +31,7 @@ const App: React.FC = () => {
           <Fragment>
             Radix Colors provides 5 bright scales, designed for black foreground
             text at step{" "}
-            <code className="text-violet-11 bg-violet-3 text-[max(12px,_85%)]">
+            <code className="text-violet-11 bg-violet-3 px-[3px] pb-[2px] text-[max(12px,_85%)]">
               9
             </code>
             .
