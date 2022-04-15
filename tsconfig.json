@@ -4,9 +4,17 @@
     "checkJs": true,
     "incremental": true,
     "moduleResolution": "node",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "noEmit": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
     "target": "esnext"
   }
 }
