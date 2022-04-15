@@ -1,11 +1,15 @@
-import { Fragment } from "react";
+import { Fragment, useRef } from "react";
 
 import Section from "./Section";
+import { useTheme } from "./hooks";
 import { BrightColors, Colors, Grays, Metals, Overlays } from "./data";
 
 const App: React.FC = () => {
+  const ref = useRef<HTMLElement>(null);
+  useTheme(ref);
+
   return (
-    <main className="bg-mauve-1 py-10 px-40 font-medium">
+    <main ref={ref} className="bg-mauve-1 py-10 px-40 font-medium">
       <h1 className="text-4xl text-slate-12">The Scales</h1>
       <p className="text-slate-11">
         An overview of all 30 Radix Colors scales.
