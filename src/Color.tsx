@@ -1,6 +1,6 @@
 const Color: React.FC<ColorProps> = ({ color, scales }) => {
   return (
-    <div className="space-y-[5px]">
+    <div className="space-y-[5px] mt-[45px]">
       <h3 className="text-slate-12 text-[17px] capitalize empty:hidden">
         {color}
       </h3>
