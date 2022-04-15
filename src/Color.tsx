@@ -28,7 +28,7 @@ const Color: React.FC<ColorProps> = ({ color, isOverlay, scales }) => {
 
 const Scale: React.FC<ScaleProps> = ({ isOverlay, scale, steps }) => {
   const isDarkAlpha = scale.endsWith("DarkA");
-  const isLightAlpha = !isDarkAlpha && scale.endsWith("A");
+  const isLightAlpha = !isDarkAlpha && !isOverlay && scale.endsWith("A");
 
   return (
     <div className="flex items-center justify-center gap-x-[2px]">
