@@ -5,8 +5,8 @@ import Color from "./Color";
 const Section: React.FC<SectionProps> = ({ colors, description, title }) => {
   return (
     <Fragment>
-      <h2 className="text-slate-12 text-[27px] mt-[45px] mb-[10px]">{title}</h2>
-      <p className="text-slate-12 text-[15px] mb-[15px]">{description}</p>
+      <h2 className="mt-[45px] mb-[10px] text-[27px] text-slate-12">{title}</h2>
+      <p className="mb-[15px] text-[15px] text-slate-12">{description}</p>
       {Object.entries(colors).map(([color, scales]) => (
         <Color key={color} {...{ color, scales }} />
       ))}
