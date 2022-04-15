@@ -5,12 +5,12 @@ const Color: React.FC<ColorProps> = ({ color, scales }) => {
         {color}
       </h3>
       <div className="space-y-[2px]">
-        <div className="grid min-w-0 grid-cols-scale gap-x-[2px]">
-          <div></div>
+        <div className="flex items-center justify-center gap-x-[2px]">
+          <div className="grow" />
           {Array.from({ length: 12 }, (_, i) => (
             <span
               key={i}
-              className="inline-block w-full h-full text-center text-slate-11"
+              className="inline-block w-[50px] text-center text-slate-11"
             >
               {i + 1}
             </span>
@@ -26,10 +26,13 @@ const Color: React.FC<ColorProps> = ({ color, scales }) => {
 
 const Scale: React.FC<ScaleProps> = ({ scale, steps }) => {
   return (
-    <div className="grid min-w-0 grid-cols-scale gap-x-[2px]">
-      <code className="text-slate-11 text-[13px]">{scale}</code>
+    <div className="flex items-center justify-center gap-x-[2px]">
+      <code className="grow text-slate-11 text-[13px]">{scale}</code>
       {steps.map((step) => (
-        <div key={step} className={`inline-block w-full h-full ${step}`} />
+        <div
+          key={step}
+          className={`inline-block w-[50px] aspect-[1.5] ${step}`}
+        />
       ))}
     </div>
   );

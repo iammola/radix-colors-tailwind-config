@@ -3,12 +3,7 @@ const colors = require("@radix-ui/colors");
 /** @type {import("tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
   content: ["src/**.tsx", "src/data.ts"],
-  theme: {
-    colors: radixToTailwindConfig(),
-    extend: {
-      gridTemplateColumns: { scale: "7.5rem repeat(12, minmax(0, 1fr))" },
-    },
-  },
+  theme: { colors: radixToTailwindConfig() },
 };
 
 function radixToTailwindConfig() {
