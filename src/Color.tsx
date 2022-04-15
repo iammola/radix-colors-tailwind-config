@@ -25,6 +25,9 @@ const Color: React.FC<ColorProps> = ({ color, isOverlay, scales }) => {
 };
 
 const Scale: React.FC<ScaleProps> = ({ isOverlay, scale, steps }) => {
+  const isDarkAlpha = scale.endsWith("DarkA");
+  const isLightAlpha = !isDarkAlpha && scale.endsWith("A");
+
   return (
     <div className="flex items-center justify-center gap-x-[2px]">
       <code className="grow text-[13px] text-slate-11 dark:text-slate-dark-11">
@@ -33,9 +36,11 @@ const Scale: React.FC<ScaleProps> = ({ isOverlay, scale, steps }) => {
       {steps.map((step) => (
         <div
           key={step}
-          className={`aspect-[1.5] w-[50px]${
-            isOverlay ? " bg-overlay-grid" : ""
-          }`}
+          className={`aspect-[1.5] w-[50px] ${
+            isOverlay ? "bg-overlay-grid" : ""
+          } ${isDarkAlpha ? "bg-transparent" : ""} ${
+            isLightAlpha ? "bg-white" : ""
+          }`.trim()}
         >
           <div className={`h-full w-full ${step}`} />
         </div>
