@@ -5,9 +5,11 @@ import { BrightColors, Colors, Grays, Metals, Overlays } from "./data";
 
 const App: React.FC = () => {
   return (
-    <main className="bg-mauve-1 py-10 px-40 font-medium">
-      <h1 className="text-4xl text-slate-12">The Scales</h1>
-      <p className="text-slate-11">
+    <main className="bg-mauve-1 py-10 px-40 font-medium dark:bg-mauve-dark-1">
+      <h1 className="text-4xl text-slate-12 dark:text-slate-dark-12">
+        The Scales
+      </h1>
+      <p className="text-slate-11 dark:text-slate-dark-11">
         An overview of all 30 Radix Colors scales.
       </p>
       <Section
@@ -17,7 +19,7 @@ const App: React.FC = () => {
           <Fragment>
             Radix Colors provides 15 color scales, designed for white foreground
             text at step{" "}
-            <code className="bg-violet-3 px-[3px] pb-[2px] text-[max(12px,_85%)] text-violet-11">
+            <code className="bg-violet-3 px-[3px] pb-[2px] text-[max(12px,_85%)] text-violet-11 dark:bg-violet-dark-3 dark:text-violet-dark-11">
               9
             </code>
             .
@@ -31,7 +33,7 @@ const App: React.FC = () => {
           <Fragment>
             Radix Colors provides 5 bright scales, designed for black foreground
             text at step{" "}
-            <code className="bg-violet-3 px-[3px] pb-[2px] text-[max(12px,_85%)] text-violet-11">
+            <code className="bg-violet-3 px-[3px] pb-[2px] text-[max(12px,_85%)] text-violet-11 dark:bg-violet-dark-3 dark:text-violet-dark-11">
               9
             </code>
             .

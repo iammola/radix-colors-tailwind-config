@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .bg-overlay-grid {
-    background-color: transparent;
-    background-size: 12px 12px;
-    background-position-x: 0px, 6px, 6px, 0px;
-    background-position-y: 0px, 0px, -6px, 6px;
+  .light-grid {
     background-image: linear-gradient(
         45deg,
         theme(colors.gray.6) 25%,
@@ -16,5 +12,24 @@
       linear-gradient(135deg, theme(colors.gray.6) 25%, transparent 25%),
       linear-gradient(45deg, transparent 75%, theme(colors.gray.6) 75%),
       linear-gradient(135deg, transparent 75%, theme(colors.gray.6) 75%);
+  }
+
+  .dark-grid {
+    background-image: linear-gradient(
+        45deg,
+        theme(colors.gray-dark.6) 25%,
+        transparent 25%
+      ),
+      linear-gradient(135deg, theme(colors.gray-dark.6) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, theme(colors.gray-dark.6) 75%),
+      linear-gradient(135deg, transparent 75%, theme(colors.gray-dark.6) 75%);
+  }
+
+  .bg-overlay-grid {
+    background-color: transparent;
+    background-size: 12px 12px;
+    background-position-x: 0px, 6px, 6px, 0px;
+    background-position-y: 0px, 0px, -6px, 6px;
+    @apply light-grid dark:dark-grid;
   }
 }
