@@ -2,18 +2,9 @@ const colors = require("@radix-ui/colors");
 
 /** @type {import("tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
-  darkMode: "class",
   content: ["src/**.tsx", "src/data.ts"],
   theme: { colors: radixToTailwindConfig() },
 };
-
-/**
- * @param {string} step
- * @param {string} value
- */
-function getColor(step, value) {
-  return `var(--${step}, ${value})`;
-}
 
 /**
  * @param {string} step
@@ -31,7 +22,7 @@ function radixToTailwindConfig() {
     const steps = Object.entries(colorSteps).reduce(
       (acc, [step, value]) => ({
         ...acc,
-        [getStep(step, arr[0])]: getColor(step, value),
+        [getStep(step, arr[0])]: value,
       }),
       {}
     );
