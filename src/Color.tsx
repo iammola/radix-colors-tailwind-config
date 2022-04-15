@@ -1,3 +1,5 @@
+import { classnames } from "./utils";
+
 const Color: React.FC<ColorProps> = ({ color, isOverlay, scales }) => {
   return (
     <div className="mt-[45px] space-y-[2px]">
@@ -36,13 +38,13 @@ const Scale: React.FC<ScaleProps> = ({ isOverlay, scale, steps }) => {
       {steps.map((step) => (
         <div
           key={step}
-          className={`aspect-[1.5] w-[50px] ${
-            isOverlay ? "bg-overlay-grid" : ""
-          } ${isDarkAlpha ? "bg-transparent" : ""} ${
-            isLightAlpha ? "bg-white" : ""
-          }`.trim()}
+          className={classnames("aspect-[1.5] w-[50px]", {
+            "bg-overlay-grid": isOverlay,
+            "bg-white": isLightAlpha,
+            "bg-transparent": isDarkAlpha,
+          })}
         >
-          <div className={`h-full w-full ${step}`} />
+          <div className={classnames("h-full w-full", step)} />
         </div>
       ))}
     </div>
