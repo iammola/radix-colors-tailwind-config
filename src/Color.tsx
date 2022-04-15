@@ -1,4 +1,4 @@
-const Color: React.FC<ColorProps> = ({ color, scales }) => {
+const Color: React.FC<ColorProps> = ({ color, isOverlay, scales }) => {
   return (
     <div className="mt-[45px] space-y-[2px]">
       {color && (
@@ -18,21 +18,25 @@ const Color: React.FC<ColorProps> = ({ color, scales }) => {
         ))}
       </div>
       {Object.entries(scales).map(([scale, steps]) => (
-        <Scale key={scale} {...{ scale, steps }} />
+        <Scale key={scale} {...{ isOverlay, scale, steps }} />
       ))}
     </div>
   );
 };
 
-const Scale: React.FC<ScaleProps> = ({ scale, steps }) => {
+const Scale: React.FC<ScaleProps> = ({ isOverlay, scale, steps }) => {
   return (
     <div className="flex items-center justify-center gap-x-[2px]">
       <code className="grow text-[13px] text-slate-11">{scale}</code>
       {steps.map((step) => (
         <div
           key={step}
-          className={`inline-block aspect-[1.5] w-[50px] ${step}`}
-        />
+          className={`aspect-[1.5] w-[50px]${
+            isOverlay ? " bg-overlay-grid" : ""
+          }`}
+        >
+          <div className={`h-full w-full ${step}`} />
+        </div>
       ))}
     </div>
   );
@@ -41,10 +45,12 @@ const Scale: React.FC<ScaleProps> = ({ scale, steps }) => {
 interface ScaleProps {
   scale: string;
   steps: string[];
+  isOverlay?: boolean;
 }
 
 interface ColorProps {
   color: string;
+  isOverlay?: boolean;
   scales: Record<string, string[]>;
 }
 

@@ -53,6 +53,7 @@ const App: React.FC = () => {
         description="Radix Colors provides 2 metal scales."
       />
       <Section
+        isOverlay
         title="Overlays"
         colors={{ "": Overlays }}
         description="The black and white scales are designed for overlays. These scales don’t change across themes."
