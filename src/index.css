@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import "@radix-ui/colors/amber.css";
 @import "@radix-ui/colors/amberA.css";
 @import "@radix-ui/colors/amberDark.css";
@@ -144,3 +140,7 @@
 
 @import "@radix-ui/colors/blackA.css";
 @import "@radix-ui/colors/whiteA.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
