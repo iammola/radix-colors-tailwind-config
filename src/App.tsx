@@ -6,9 +6,29 @@ import { BrightColors, Colors, Grays, Metals, Overlays } from "./data";
 const App: React.FC = () => {
   return (
     <main className="bg-mauve-1 py-10 px-5 font-medium dark:bg-mauve-dark-1 sm:px-10 md:px-16 lg:px-40">
-      <h1 className="text-4xl text-slate-12 dark:text-slate-dark-12">
-        The Scales
-      </h1>
+      <div className="flex items-center justify-start gap-x-2">
+        <h1 className="text-4xl text-slate-12 dark:text-slate-dark-12">
+          The Scales
+        </h1>
+        <span className="text-violet-11 dark:text-violet-dark-11">
+          &middot;
+        </span>
+        <a
+          href="https://www.radix-ui.com/docs/colors/getting-started/installation"
+          className="flex items-center justify-center gap-x-2 text-violet-11 dark:text-violet-dark-11"
+        >
+          Original Website
+        </a>
+        <span className="text-violet-11 dark:text-violet-dark-11">
+          &middot;
+        </span>
+        <a
+          href="https://www.github.com/iammola/"
+          className="flex items-center justify-center gap-x-2 text-violet-11 dark:text-violet-dark-11"
+        >
+          Github Repository
+        </a>
+      </div>
       <p className="text-slate-11 dark:text-slate-dark-11">
         An overview of all 30 Radix Colors scales.
       </p>
