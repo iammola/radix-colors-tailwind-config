@@ -23,7 +23,7 @@ const App: React.FC = () => {
           &middot;
         </span>
         <a
-          href="https://www.github.com/iammola/"
+          href="https://github.com/iammola/radix-colors-tailwind-config"
           className="flex items-center justify-center gap-x-2 text-violet-11 dark:text-violet-dark-11"
         >
           Github Repository
