@@ -9,8 +9,8 @@ export const Scale: React.FC<ScaleProps> = ({ isOverlay, scale, steps }) => {
       <code className="min-w-[7.5rem] grow pr-4 text-[13px] text-slate-11 dark:text-slate-dark-11">
         {scale}
       </code>
-      {steps.map((step) => (
-        <Step key={step} {...{ step, isDark, isAlpha, isOverlay }} />
+      {steps.map((step, idx) => (
+        <Step key={step} {...{ idx, step, isDark, isAlpha, isOverlay }} />
       ))}
     </div>
   );
