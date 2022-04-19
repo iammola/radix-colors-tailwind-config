@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import { Color } from "./Color";
+import { Color } from "components/Color";
 
 export const Section: React.FC<SectionProps> = ({ isOverlay, ...props }) => {
   return (

@@ -1,4 +1,4 @@
-import { Scale } from "./Scale";
+import { Scale } from "components/Scale";
 
 export const Color: React.FC<ColorProps> = ({ color, isOverlay, scales }) => {
   return (

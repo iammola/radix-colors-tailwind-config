@@ -1,4 +1,4 @@
-import { classnames } from "../utils";
+import { classnames } from "utils";
 
 export const Scale: React.FC<ScaleProps> = ({ isOverlay, scale, steps }) => {
   const isDark = /darka?$/i.test(scale);
