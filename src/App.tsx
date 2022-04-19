@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 
+import "./App.css";
+
 import { Section } from "./components/Section";
 import { BrightColors, Colors, Grays, Metals, Overlays } from "./data";
 
