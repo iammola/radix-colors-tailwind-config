@@ -1,4 +1,4 @@
-import { classnames } from "utils";
+import { Step } from "components/Step";
 
 export const Scale: React.FC<ScaleProps> = ({ isOverlay, scale, steps }) => {
   const isDark = /darka?$/i.test(scale);
@@ -10,19 +10,7 @@ export const Scale: React.FC<ScaleProps> = ({ isOverlay, scale, steps }) => {
         {scale}
       </code>
       {steps.map((step) => (
-        <div
-          key={step}
-          className={classnames(
-            "aspect-[0.85] w-[30px] sm:aspect-[1.5] sm:w-[50px]",
-            {
-              "bg-overlay-grid": isOverlay,
-              "bg-white": isAlpha && !isDark,
-              "bg-transparent": isAlpha && isDark,
-            }
-          )}
-        >
-          <div className={classnames("h-full w-full", step)} />
-        </div>
+        <Step key={step} {...{ step, isDark, isAlpha, isOverlay }} />
       ))}
     </div>
   );
