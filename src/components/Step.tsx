@@ -1,3 +1,4 @@
+import cs from "color-string";
 import { useState } from "react";
 import {
   CheckIcon,
@@ -19,7 +20,10 @@ export const Step: React.FC<StepProps> = ({ isAlpha, isDark, ...props }) => {
     const { backgroundColor } = getComputedStyle(firstElementChild);
 
     try {
-      await navigator.clipboard.writeText(backgroundColor);
+      const value = cs.get(backgroundColor)?.value;
+      await navigator.clipboard.writeText(
+        value ? cs.to.hex(value) : backgroundColor
+      );
       setCopyState("COPIED");
     } catch (error) {
       setCopyState("ERROR");
